@@ -18,6 +18,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.11",
         "league/commonmark": "^2.1",
+        "nelmio/cors-bundle": "^2.3",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "^6.2",
         "symfony/console": "^6.2",
@@ -43,7 +44,8 @@
         "symfony/yaml": "^6.2",
         "twig/extra-bundle": "^3.3",
         "twig/intl-extra": "^3.3",
-        "twig/markdown-extra": "^3.3"
+        "twig/markdown-extra": "^3.3",
+        "wedrix/watchtower-bundle": "^1.0"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.0",

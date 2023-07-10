@@ -122,6 +122,18 @@
     "monolog/monolog": {
         "version": "2.3.5"
     },
+    "nelmio/cors-bundle": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.5",
+            "ref": "6bea22e6c564fba3a1391615cada1437d0bde39c"
+        },
+        "files": [
+            "config/packages/nelmio_cors.yaml"
+        ]
+    },
     "nette/schema": {
         "version": "v1.2.2"
     },
@@ -532,5 +544,25 @@
     },
     "twig/twig": {
         "version": "v3.3.4"
+    },
+    "wedrix/watchtower-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "875b2b58dc2a044ccc73a4d02c2fa9cc7651b45b"
+        },
+        "files": [
+            "config/packages/wedrix_watchtower_bundle.yaml",
+            "config/routes/wedrix_watchtower_bundle_routes.yaml",
+            "config/watchtower/plugins/authorizors/.gitignore",
+            "config/watchtower/plugins/filters/.gitignore",
+            "config/watchtower/plugins/mutations/.gitignore",
+            "config/watchtower/plugins/orderings/.gitignore",
+            "config/watchtower/plugins/resolvers/.gitignore",
+            "config/watchtower/plugins/selectors/.gitignore",
+            "config/watchtower/scalar_type_definitions/.gitignore"
+        ]
     }
 }
