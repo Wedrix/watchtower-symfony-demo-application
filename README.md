@@ -20,4 +20,4 @@ Installation
         symfony server:start
 
 7. Install an appropriate GraphQL client, for example, [ChromeiQL](https://chrome.google.com/webstore/detail/chromeiql/fkkiamalmpiidkljmicmjfbieiclmeij)
-8. As the GraphQL api from the configured endpoint, for example, <http://localhost:8000/graphql.json>
+8. Access the GraphQL api from the configured endpoint, for example, <http://localhost:8000/graphql.json>
