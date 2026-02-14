@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wedrix\Watchtower\Plugin\SelectorPlugin;
+namespace Wedrix\Watchtower\SelectorPlugin;
 
 use Wedrix\Watchtower\Resolver\Node;
 use Wedrix\Watchtower\Resolver\QueryBuilder;
@@ -12,15 +12,11 @@ function apply_post_comments_count_selector(
     Node $node
 ): void
 {
-    $rootAlias = $queryBuilder->rootAlias();
+    $rootEntityAlias = $queryBuilder->rootEntityAlias();
+    $commentsAlias = $queryBuilder->reconciledAlias('comments');
 
-    if ($node->isACollection()) {
-        $queryBuilder->join("$rootAlias.comments", "comments")
-                    ->addGroupBy("$rootAlias.id")
-                    ->addSelect("COUNT(comments) AS commentsCount");
-    }
-    else {
-        $queryBuilder->join("$rootAlias.comments", "comments")
-                    ->addSelect("COUNT(comments) AS commentsCount");
-    }
+    $queryBuilder
+        ->leftJoin("$rootEntityAlias.comments", $commentsAlias)
+        ->addGroupBy("$rootEntityAlias.id")
+        ->addSelect("COUNT($commentsAlias) AS commentsCount");
 }

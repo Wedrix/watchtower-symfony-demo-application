@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wedrix\Watchtower\Plugin\ResolverPlugin;
+namespace Wedrix\Watchtower\ResolverPlugin;
 
 use Wedrix\Watchtower\Resolver\Node;
 

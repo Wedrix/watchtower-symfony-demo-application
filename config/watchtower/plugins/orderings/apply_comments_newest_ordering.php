@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wedrix\Watchtower\Plugin\OrderingPlugin;
+namespace Wedrix\Watchtower\OrderingPlugin;
 
 use Wedrix\Watchtower\Resolver\Node;
 use Wedrix\Watchtower\Resolver\QueryBuilder;
@@ -12,5 +12,5 @@ function apply_comments_newest_ordering(
     Node $node
 ): void
 {
-    $queryBuilder->addOrderBy("{$queryBuilder->rootAlias()}.publishedAt", 'DESC');
+    $queryBuilder->addOrderBy("{$queryBuilder->rootEntityAlias()}.publishedAt", 'DESC');
 }

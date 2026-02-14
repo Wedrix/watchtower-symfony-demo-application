@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Wedrix\Watchtower\ScalarTypeDefinition\LimitTypeDefinition;
+namespace Wedrix\Watchtower\LimitTypeDefinition;
 
 use GraphQL\Language\AST\IntValueNode;
 
